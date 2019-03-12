@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>creative computing website</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<header>
+
+<div class="row">
+<div class="logo">
+<img src="http://www.oogazone.com/wp-content/uploads/2018/07/best-hd-kiss-phoenix-cygnini-symbol-logo-library.jpg" width="400px">
+<ul class="main-nav">
+<li class="active"><a href=" "> project1 </a></li>
+<li><a href=" "> project2 </a></li>
+<li><a href=" "> project3 </a></li>
+<li><a href=" "> project4 </a></li>
+
+</ul>
+</div>
+</div>
+
+
+<div class="Network">
+<h1>Creative Computing</h1>
+</div>
+<div class="button">
+<a href="" class="btn btn-one"> written work </a>
+<a href="" class="btn btn-two"> videos</a>
+</div>
+</header>
+
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="https://i.ytimg.com/vi/EVoKOWwfR7E/maxresdefault.jpg" style="width:200%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="http://www.justscience.in/wp-content/uploads/2018/01/what-is-the-future-of-computing-and-artificial-intelligence.jpg" style="width:200%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="http://s3-us-west-1.amazonaws.com/www-prod-storage.cloud.caltech.edu/styles/article_photo/s3/Quantum_Computing_NewStudy-638-NEWS-WEB.jpg?itok=uE3ui1am" style="width:200%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+</body>
+
+
+</html>
